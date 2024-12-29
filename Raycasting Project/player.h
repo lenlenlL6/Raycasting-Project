@@ -6,6 +6,8 @@ private:
 
 	SDL_Rect rect;
 
+	double angle = 0;
+
 public:
 
 	Player(const int x, const int y, const int w, const int h) {
@@ -18,6 +20,14 @@ public:
 	void setPosition(const int x, const int y) {
 		this->rect.x = x;
 		this->rect.y = y;
+	}
+
+	void setAngle(const double angle) {
+		this->angle = angle;
+	}
+
+	double getAngle() {
+		return this->angle;
 	}
 
 	void drawPlayer(SDL_Renderer* renderer) {
